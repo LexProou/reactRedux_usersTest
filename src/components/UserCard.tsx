@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { MoreVertical } from 'lucide-react';
 import { User } from '../types/User';
+import avatar from '../assets/img/avatar.png'
 
 interface UserCardProps {
   user: User; 
@@ -37,7 +38,7 @@ const UserCard: React.FC<UserCardProps> = ({ user, onArchive, onHide, onUnarchiv
   return (
     <div className="user-card">
       <div className="user-card-overlay">
-        <img src="./src/assets/avatar.jpg" alt="Avatar" className="user-avatar" />
+        <img src={avatar} alt="Avatar" className="user-avatar" />
       </div>
       <div className="user-info">
         <div className='title-group'>

@@ -6,9 +6,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import avatar from '../assets/avatar.jpg';
-import arrow from '../assets/arrow.svg';
-import '../index.css';
+import avatar from '../assets/img/avatar.png'
+import arrow from '../assets/img/arrow.svg'
 import { User } from '../types/User';
 
 const EditPage = () => {

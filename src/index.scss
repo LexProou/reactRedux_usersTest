@@ -28,6 +28,26 @@ body {
   border-radius: 16px;
   padding: 24px;
   background-color: $sixColor;
+
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+}
+
+.user-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.archiving {
+  transform: translateX(100%) scale(1.8);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+}
+
+.restoring {
+  transform: translateX(0) scale(1.1);
+  opacity: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
 }
 
 .user-card-overlay {
@@ -48,6 +68,12 @@ body {
   width: 24px;
   height: 24px;
   color: #595959;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.buttonMenu:hover {
+  transform: scale(1.2);
+  color: $Accent;
 }
 
 .menu {
@@ -60,7 +86,7 @@ body {
   border: 1px solid #e2e2e2;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 
   ul {
     list-style: none;
@@ -80,6 +106,11 @@ body {
       }
     }
   }
+}
+
+.buttonMenu:hover + .menu {
+  opacity: 1;
+  visibility: visible;
 }
 
 .user-list {
@@ -137,6 +168,10 @@ body {
 
 .user-archived .user-info .title-group h1 {
   color: #595959 !important;
+}
+
+.user-archived {
+  margin-left: 0rem;
 }
 
 .user-avatar {
@@ -298,7 +333,14 @@ margin-right: 0rem;
   padding-right: 42px;
   padding-bottom: 12px;
   padding-left: 42px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
+
+.button-save:hover {
+  transform: scale(1.05);
+  background-color: darken($oneColor, 10%);
+}
+
 
 .btn-back {
   color: $twoColor !important;
@@ -336,6 +378,10 @@ margin-right: 0rem;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
   }
+
+  .user-archived {
+    margin-left: 0rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -344,7 +390,9 @@ margin-right: 0rem;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
   }
-
+  .user-archived {
+    margin-left: 0rem;
+  }
   .navbar {
     .MuiToolbar-root {
       justify-content: space-between;
@@ -364,6 +412,9 @@ margin-right: 0rem;
     width: 100%;
     margin: 0.5rem 0;
   }
+  .user-archived {
+    margin-left: 0rem;
+  }
 
   .navbar {
     .MuiToolbar-root {
@@ -372,8 +423,6 @@ margin-right: 0rem;
     }
 
   }
-
- 
 
   .edit-page {
     padding: 0.5rem;
@@ -451,6 +500,9 @@ margin-right: 0rem;
       text-align: left;
       h1 {
         font-size: 0.675rem;
+        opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
     
       }
       h2 {
@@ -461,6 +513,11 @@ margin-right: 0rem;
         margin-top: -1rem;
       }
     }
+  }
+
+  .user-card:hover .user-info h1 {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .navbar {

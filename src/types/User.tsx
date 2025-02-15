@@ -11,5 +11,5 @@ export interface User {
     name: string;
   };
   isArchived: boolean;
+  [key: string]: string | object | undefined | number | boolean ; // Индексная сигнатура для поддержки динамических полей
 }
-

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers, archiveUser, unarchiveUser, hideUser } from '../store/userSlice';
 import { RootState, AppDispatch } from '../store/store';
 import UserCard from '../components/UserCard';
+// import Posts from '../components/Posts';
 
 const HomePage: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -80,7 +81,12 @@ const HomePage: React.FC = () => {
           ))}
         </div>
       </div>
+
+      <div className='container-posts'>
+      {/* <Posts /> */}
     </div>
+    </div>
+   
   );
 };
 

@@ -1,20 +1,10 @@
-$Accent: #22A0BC;
-$oneColor: #161616;
-$twoColor: #595959;
-$threeColor: #9C9C9C;
-$fourColor: #DADADA;
-$fiveColor: #F4F4F4;
-$sixColor: #FDFDFD;
-
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $fiveColor;
+  background-color: #F4F4F4;
 }
 
 .user-card {
@@ -27,10 +17,8 @@ body {
   margin: 0.5rem;
   border-radius: 16px;
   padding: 24px;
-  background-color: $sixColor;
-
+  background-color: #FDFDFD;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-
 }
 
 .user-card:hover {
@@ -73,7 +61,7 @@ body {
 
 .buttonMenu:hover {
   transform: scale(1.2);
-  color: $Accent;
+  color: #22A0BC;
 }
 
 .menu {
@@ -81,31 +69,28 @@ body {
   right: 0;
   top: 40px;
   width: 192px;
-  color: $oneColor !important;
-  background-color: $sixColor !important;
+  color: #161616 !important;
+  background-color: #FDFDFD !important;
   border: 1px solid #e2e2e2;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: opacity 0.3s ease, visibility 0.3s ease;
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      padding: 8px 16px;
-      cursor: pointer;
-      &:hover {
-        background-color: #f5f5f5;
-      }
-
-      a {
-        text-decoration: none;
-        color: $oneColor !important;
-      }
-    }
-  }
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu ul li {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.menu ul li:hover {
+  background-color: #f5f5f5;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #161616 !important;
 }
 
 .buttonMenu:hover + .menu {
@@ -143,23 +128,19 @@ body {
   margin-left: 3rem;
   justify-items: center;
   align-items: center;
-
-  .user-avatar {
-    filter: grayscale(0.9);
-    transition: filter 0.3s ease;
-  }
-
-  .user-info {
-    h1 {
-      color: $twoColor !important;
-    }
-    h2 {
-      color: $threeColor !important;
-    }
-    p {
-      color: $fourColor !important;
-    }
-  }
+}
+.user-archived .user-avatar {
+  filter: grayscale(0.9);
+  transition: filter 0.3s ease;
+}
+.user-archived .user-info h1 {
+  color: #595959 !important;
+}
+.user-archived .user-info h2 {
+  color: #9C9C9C !important;
+}
+.user-archived .user-info p {
+  color: #DADADA !important;
 }
 
 .archive {
@@ -186,59 +167,47 @@ body {
   justify-content: center;
   margin-left: 1rem;
   text-align: left;
-
-  .title-group {
-    margin-bottom: 1rem;
-
-    h1 {
-      font-size: 1.125rem;
-      color: $Accent !important;
-    }
-
-    h2 {
-      font-size: 0.875rem;
-      color: $twoColor !important;
-    }
-  }
-
-  p {
-    font-size: 0.875rem;
-    color: $threeColor !important;
-    margin-top: 2rem;
-  }
+}
+.user-info .title-group {
+  margin-bottom: 1rem;
+}
+.user-info .title-group h1 {
+  font-size: 1.125rem;
+  color: #22A0BC !important;
+}
+.user-info .title-group h2 {
+  font-size: 0.875rem;
+  color: #595959 !important;
+}
+.user-info p {
+  font-size: 0.875rem;
+  color: #9C9C9C !important;
+  margin-top: 2rem;
 }
 
 button {
   margin: 5px;
 }
 
-.navbar {
-  .MuiToolbar-root {
-    display: flex;
-    justify-content: space-around;
-    background-color: $sixColor !important;
-    padding: 0 1rem;
-
-  }
-
-  .logo {
-    img {
-      height: 40px;
-      margin-right: 15rem;
-    }
-    h1 {
-      color: $oneColor !important;
-    }
-  }
-
-  .icon-buttons {
-    display: flex;
-    align-items: center;
-
-    .MuiIconButton-root {
-      margin-right: 8px;
-    }
-  }
+.navbar .MuiToolbar-root {
+  display: flex;
+  justify-content: space-around;
+  background-color: #FDFDFD !important;
+  padding: 0 1rem;
+}
+.navbar .logo img {
+  height: 40px;
+  margin-right: 15rem;
+}
+.navbar .logo h1 {
+  color: #161616 !important;
+}
+.navbar .icon-buttons {
+  display: flex;
+  align-items: center;
+}
+.navbar .icon-buttons .MuiIconButton-root {
+  margin-right: 8px;
 }
 
 .container {
@@ -247,17 +216,16 @@ button {
   flex-wrap: wrap;
   align-content: space-around;
   justify-content: center;
-
-  .titleH1 {
-    margin-left: 4rem;
-  }
+}
+.container .titleH1 {
+  margin-left: 4rem;
 }
 
 .edit-page {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start; 
+  align-items: flex-start;
   margin-top: 0px;
   margin-left: 1rem;
 }
@@ -274,38 +242,32 @@ button {
   padding: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: $sixColor;
+  background-color: #FDFDFD;
   margin-right: 8rem;
-
-  .edit-name {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-top: 2rem;
-    margin-right: 10rem;
-  }
-  
-  a {
+}
+.edit-info .edit-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  margin-right: 10rem;
+}
+.edit-info a {
   text-decoration: none;
   font-size: larger;
-
-   }
-   h1 {
-    text-decoration: none;
-    font-size: larger;
-    cursor: pointer;
-   }
-
-
-  .user-avatar {
-    width: 360px;
-height: 575px;
-border-radius: 8px;
-margin-top: 2rem;
-margin-right: 0rem;
-
-  }
+}
+.edit-info h1 {
+  text-decoration: none;
+  font-size: larger;
+  cursor: pointer;
+}
+.edit-info .user-avatar {
+  width: 360px;
+  height: 575px;
+  border-radius: 8px;
+  margin-top: 2rem;
+  margin-right: 0rem;
 }
 
 .edit-form {
@@ -320,13 +282,12 @@ margin-right: 0rem;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: $sixColor;
- 
+  background-color: #FDFDFD;
 }
 
 .button-save {
-  background-color: $oneColor !important;
-  color: $sixColor !important;
+  background-color: #161616 !important;
+  color: #FDFDFD !important;
   border-radius: 50px !important;
   margin-top: 20px !important;
   width: 170px !important;
@@ -341,15 +302,14 @@ margin-right: 0rem;
 
 .button-save:hover {
   transform: scale(1.05);
-  background-color: darken($oneColor, 10%);
+  background-color: black;
 }
 
-
 .btn-back {
-  color: $twoColor !important;
-  .arrow {
-    margin-left: 24rem;
-  }
+  color: #595959 !important;
+}
+.btn-back .arrow {
+  margin-left: 24rem;
 }
 
 .check-circle {
@@ -372,7 +332,7 @@ margin-right: 0rem;
   border-radius: 16px;
   padding: 40px;
   gap: 20px;
-  background-color: $sixColor !important;
+  background-color: #FDFDFD !important;
 }
 
 @media (max-width: 1200px) {
@@ -381,12 +341,10 @@ margin-right: 0rem;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
   }
-
   .user-archived {
     margin-left: 0rem;
   }
 }
-
 @media (max-width: 1024px) {
   .user-active,
   .user-archived {
@@ -396,21 +354,17 @@ margin-right: 0rem;
   .user-archived {
     margin-left: 0rem;
   }
-  .navbar {
-    .MuiToolbar-root {
-      justify-content: space-between;
-      padding: 0 0.5rem;
-    }
+  .navbar .MuiToolbar-root {
+    justify-content: space-between;
+    padding: 0 0.5rem;
   }
 }
-
 @media (max-width: 768px) {
   .user-active,
   .user-archived {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
   }
-
   .user-card {
     width: 100%;
     margin: 0.5rem 0;
@@ -418,15 +372,10 @@ margin-right: 0rem;
   .user-archived {
     margin-left: 0rem;
   }
-
-  .navbar {
-    .MuiToolbar-root {
-      flex-direction: row;
-      align-items: center;
-    }
-
+  .navbar .MuiToolbar-root {
+    flex-direction: row;
+    align-items: center;
   }
-
   .edit-page {
     padding: 0.5rem;
     display: flex;
@@ -436,27 +385,23 @@ margin-right: 0rem;
     margin-top: 2rem;
     margin-left: 10rem;
   }
-
   .edit-info,
   .edit-form {
     max-width: 100%;
     padding: 0.5rem;
     width: 640px;
-
-    .user-avatar {
-      width: 450px;
-      height: 390px;
-    }
   }
-
+  .edit-info .user-avatar,
+  .edit-form .user-avatar {
+    width: 450px;
+    height: 390px;
+  }
   .edit-form {
     margin-right: 8rem;
     margin-top: 2rem;
   }
 }
-
 @media (max-width: 480px) {
-
   .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -464,97 +409,78 @@ margin-right: 0rem;
   }
   .user-active,
   .user-archived {
-   
     grid-template-columns: repeat(2, 1fr);
- 
   }
-
   .user-archived {
     margin-left: 0rem;
   }
-
   .user-card {
     width: 162px;
     height: 242px;
     margin: 0.25rem 0;
     display: flex;
     flex-direction: column;
-
-    .buttonMenu {
-      margin-top: 9rem;
-      width: 24px;
-      height: 24px;
-      position: absolute;
-      top: 8px;
-      right: 8px;
-    }
-
-    .menu {
-      width: 160px;
-      margin-top: 25px;
-    }
-
-    .user-info {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      margin-left: 0rem;
-      text-align: left;
-      h1 {
-        font-size: 0.675rem;
-        opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-    
-      }
-      h2 {
-        font-size: 0.55rem;
-      }
-      p {
-        font-size: 0.45rem;
-        margin-top: -1rem;
-      }
-    }
   }
-
+  .user-card .buttonMenu {
+    margin-top: 9rem;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  .user-card .menu {
+    width: 160px;
+    margin-top: 25px;
+  }
+  .user-card .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 0rem;
+    text-align: left;
+  }
+  .user-card .user-info h1 {
+    font-size: 0.675rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .user-card .user-info h2 {
+    font-size: 0.55rem;
+  }
+  .user-card .user-info p {
+    font-size: 0.45rem;
+    margin-top: -1rem;
+  }
   .user-card:hover .user-info h1 {
     opacity: 1;
     transform: translateY(0);
   }
-
-  .navbar {
-    .MuiToolbar-root {
-      flex-direction: row;
-      align-items: center;
-      width: 99%;
-      
-    }
-    .icon-buttons .MuiIconButton-root {
-      display: none;
-    }
-
-    .MuiAvatar-root {
-      margin-left: -4rem;
-    }
-
-    .MuiAvatar-img {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-     
-    }
-
-    .logo img {
-      height: 24px;
-      margin-left: 0rem;
-    }
-    
+  .navbar .MuiToolbar-root {
+    flex-direction: row;
+    align-items: center;
+    width: 99%;
+  }
+  .navbar .icon-buttons .MuiIconButton-root {
+    display: none;
+  }
+  .navbar .MuiAvatar-root {
+    margin-left: -4rem;
+  }
+  .navbar .MuiAvatar-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .navbar .logo img {
+    height: 24px;
+    margin-left: 0rem;
   }
   .btn-back .arrow {
     margin-left: 1rem;
-}
-
+  }
   .edit-page {
     padding: 0.5rem;
     display: flex;
@@ -564,62 +490,47 @@ margin-right: 0rem;
     margin-top: 2rem;
     margin-left: 0rem;
   }
-
   .edit-info,
   .edit-form {
     max-width: 95%;
     padding: 0.5rem;
     width: 635px;
     margin-left: 9.5rem;
-
-    .user-avatar {
-      width: 287px;
-      height: 200px;
-      margin-top: 1rem;
-    }
   }
-
+  .edit-info .user-avatar,
+  .edit-form .user-avatar {
+    width: 287px;
+    height: 200px;
+    margin-top: 1rem;
+  }
   .edit-form {
     margin-right: 8rem;
     margin-top: 2rem;
   }
-
   .MuiDialogContent-root {
     margin-left: -1rem;
   }
 }
-
 @media (max-width: 320px) {
   .user-active,
   .user-archived {
     grid-template-columns: 1fr;
     width: 100%;
   }
-
   .user-card {
     width: 100%;
     margin: 0.5rem 0;
   }
-
-  .navbar {
-    .MuiToolbar-root {
-      flex-direction: column;
-      align-items: center;
-    }
+  .navbar .MuiToolbar-root {
+    flex-direction: column;
+    align-items: center;
   }
-
-  .user-info {
-    .title-group {
-      h1, h2 {
-        font-size: 0.875rem;
-      }
-    }
-
-    p {
-      font-size: 0.75rem;
-    }
+  .user-info .title-group h1, .user-info .title-group h2 {
+    font-size: 0.875rem;
   }
-
+  .user-info p {
+    font-size: 0.75rem;
+  }
   .edit-page {
     padding: 0.5rem;
     display: flex;
@@ -631,23 +542,21 @@ margin-right: 0rem;
     height: 100rem;
     width: 146%;
   }
-
   .edit-info,
   .edit-form {
     max-width: 95%;
     padding: 0.5rem;
     width: 640px;
     margin-left: 8rem;
-
-    .user-avatar {
-      width: 415px;
-      height: 340px;
-      margin-top: 1rem;
-    }
   }
-
+  .edit-info .user-avatar,
+  .edit-form .user-avatar {
+    width: 415px;
+    height: 340px;
+    margin-top: 1rem;
+  }
   .edit-form {
     margin-right: 8rem;
     margin-top: 2rem;
   }
-}
+}/*# sourceMappingURL=index.css.map */

@@ -8,7 +8,7 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import Box from '@mui/material/Box';
 
 import avatar from '../assets/img/avatar.png'
-import logo from '../assets/img/logo.svg'
+
 import '../index.scss'
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
     <AppBar position="static" className='navbar'>
       <Toolbar>
         <Typography variant="h6" component="div" className='logo'>
-          <img src={logo} alt="logo" />
+          <h1 >LexxxProou</h1>
         </Typography>
         <Box className='icon-buttons'>
           <IconButton>
